@@ -70,25 +70,3 @@ class Trie {
     }
 }
 
-
-let trie = Trie()
-let file = "wordsforproblem.txt" //this is the file. we will write to and read from it
-
-
-if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-    
-    let path = dir.appendingPathComponent(file)
-    print(dir)
-    //reading
-    do {
-        let data = try String(contentsOf: path, encoding: String.Encoding.utf8)
-        let content = data.components(separatedBy: .newlines)
-        for word in content {
-            trie.Insert(word: word)
-        }
-    }
-    catch {/* error handling here */}
-}
-
-print(trie.findLogest())
-
