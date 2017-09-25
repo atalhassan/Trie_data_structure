@@ -16,3 +16,5 @@ content = read_csv("wordsforproblem.txt")
 trie = Trie()
 for word in content:
     trie.Insert(word)
+
+print(trie.FindLongestConcatenated(content))
