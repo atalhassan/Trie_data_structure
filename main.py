@@ -12,7 +12,7 @@ def read_csv(filename):
     theFile.close()
     return table
 
-content = read_csv("wordsforproblem.txt")
+content = read_csv("words.txt")
 trie = Trie()
 for word in content:
     trie.Insert(word)
